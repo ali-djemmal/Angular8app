@@ -40,11 +40,11 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),FormsModule ,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule ,// imports firebase/storage only needed for storage features
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule 
 
     // other imports here
   ],

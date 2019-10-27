@@ -1,6 +1,6 @@
 <div id="login-page center-align" class="row">
     <div class="col s4 center card-panel">
-      <form class="login-form ">
+      <form class="login-form " (ngSubmit)="insertSkils()">
         <div class="row">
           <div class="input-field col s8">
           
@@ -10,43 +10,44 @@
         <div class="row margin">
           <div class="input-field col s10">
             <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="text " name = "nam" [(ngModel)]="nam">
-            <label for="username" class="center-align">Username</label>
+            <input id="nam" type="text " name = "nam" [(ngModel)]="data.nam">
+            <label for="nam" class="center-align">Username</label>
           </div>
         </div>
         
         <div class="row margin">
           <div class="input-field col s10">
             <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="tel" name = "Telf" [(ngModel)]="Telf">
-            <label for="username" class="center-align">Telf</label>
+            <input id="Telf" type="tel" name = "Telf" [(ngModel)]="data.Telf">
+            <label for="Telf" class="center-align">Telf</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s10">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="Address" type="text" name = "Address" [(ngModel)]="data.Address">
+            <label for="Address" class="center-align">Address</label>
           </div>
         </div><div class="row margin">
           <div class="input-field col s10">
             <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="text" name = "Address" [(ngModel)]="Address">
-            <label for="username" class="center-align">Address</label>
-          </div>
-        </div><div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="text" name = "Skils" [(ngModel)]="Skils">
-            <label for="username" class="center-align">Skils</label>
+            <input id="Skils" type="text" name = "Skils" [(ngModel)]="data.Skils">
+            <label for="Skils" class="center-align">Skils</label>
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s10">
             <i class="mdi-action-lock-outline prefix"></i>
-            <input id="password" type="number" name = "prix" [(ngModel)]="prix">
-            <label for="password">prix</label>
+            <input id="prix" type="number" name = "prix" [(ngModel)]="data.prix">
+            <label for="prix">prix</label>
           </div>
         </div>
        
-        <div class="row">
-          <div class="input-field col s5">
-            <a href="index.html" class="btn waves-effect  col s5">Register</a>
-          </div>
-        </div>
+       
+        
+            <button  type="submit" class="btn btn-success" (click)="onclick()">Register</button>
+         
+        
 
 
       </form>

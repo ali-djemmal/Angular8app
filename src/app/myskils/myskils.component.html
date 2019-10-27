@@ -1,14 +1,101 @@
+<table>
+  <thead>
+    <tr>
+        <th>key</th>
+        <th> Name</th>
+        <th> Telephone</th>
+        <th> Addrss</th>
+        <th> Skil</th>
+        <th> prix</th>
+        <th> edite</th>
+        <th> delete</th>
+    </tr>
+  </thead>
 
-  <div class="card col s5">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="/assets/imges/a339.JPG" style="width: 25% ;height: 50%;">
+  <tbody>
+    <tr *ngFor="let item of myItemArry">
+      <td>{{item.$key}}</td>
+      <td>{{item.nam}}</td>
+      <td>{{item.Telf}}</td>
+      <td>{{item.Addrss}}</td>
+      <td>{{item.Skil}}</td>
+      <td>{{item.prix}}</td>
+      <td><a class="btn-floating btn-large waves-effect waves-light green  modal-trigger" href="#i" (click)="onEdite(item.$key,item.nam,item.Telf,item.Addrss,item.Skil,item.prix)"><i class="material-icons">create</i></a></td>
+      <td><a class="btn-floating btn-large waves-effect waves-light red" (click)="onDellet(item.$key)"><i class="material-icons">delete_forever</i></a></td>
+
+      
+
+<!-- Modal Structure -->
+
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+<div id="i" class="modal">
+      
+  <form class="login-form " (ngSubmit)="onSub()">
+    <div class="row">
+      <div class="input-field col s8">
+      
+        <p class="center login-form-text" >Add Skils</p>
+      </div>
     </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+    <div class="row margin">
+      <div class="input-field col s10">
+        <i class="mdi-social-person-outline prefix"></i>
+        <input id="nam" type="text " name = "nam" value="{{nam}}">
+        <label for="nam" class="center-align">Username</label>
+      </div>
     </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    
+    <div class="row margin">
+      <div class="input-field col s10">
+        <i class="mdi-social-person-outline prefix"></i>
+        <input id="Telf" type="tel" name = "Telf" value="{{Telf}}">
+        <label for="Telf" class="center-align">Telf</label>
+      </div>
     </div>
-  </div>
+    <div class="row margin">
+      <div class="input-field col s10">
+        <i class="mdi-social-person-outline prefix"></i>
+        <input id="Address" type="text" name = "Address" value="{{Addrss}}">
+        <label for="Address" class="center-align">Address</label>
+      </div>
+    </div><div class="row margin">
+      <div class="input-field col s10">
+        <i class="mdi-social-person-outline prefix"></i>
+        <input id="Skils" type="text" name = "Skils" value="{{Skils}}">
+        <label for="Skils" class="center-align">Skils</label>
+      </div>
+    </div>
+    <div class="row margin">
+      <div class="input-field col s10">
+        <i class="mdi-action-lock-outline prefix"></i>
+        <input id="prix" type="number" name = "prix" value="{{prix}}">
+        <label for="prix">prix</label>
+      </div>
+    </div>
+   
+   
+    
+    
+     
+    
+
+
+  </form>
+
+<div class="modal-footer">
+<a type="submit" class="modal-close waves-effect waves-green btn-flat "(click)="onclick()">Register</a>
+</div>
+
+
+
+</div>
+
+
+  
+   
