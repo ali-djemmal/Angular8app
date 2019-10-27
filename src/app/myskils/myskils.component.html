@@ -46,7 +46,7 @@
     <div class="row margin">
       <div class="input-field col s10">
         <i class="mdi-social-person-outline prefix"></i>
-        <input id="nam" type="text " name = "nam" value="{{nam}}">
+        <input id="nam" type="text " name = "nam" [(ngModel)]="nam">
         <label for="nam" class="center-align">Username</label>
       </div>
     </div>
@@ -54,27 +54,27 @@
     <div class="row margin">
       <div class="input-field col s10">
         <i class="mdi-social-person-outline prefix"></i>
-        <input id="Telf" type="tel" name = "Telf" value="{{Telf}}">
+        <input id="Telf" type="tel" name = "Telf" [(ngModel)]="Telf">
         <label for="Telf" class="center-align">Telf</label>
       </div>
     </div>
     <div class="row margin">
       <div class="input-field col s10">
         <i class="mdi-social-person-outline prefix"></i>
-        <input id="Address" type="text" name = "Address" value="{{Addrss}}">
+        <input id="Address" type="text" name = "Address" [(ngModel)]="Addrss">
         <label for="Address" class="center-align">Address</label>
       </div>
     </div><div class="row margin">
       <div class="input-field col s10">
         <i class="mdi-social-person-outline prefix"></i>
-        <input id="Skils" type="text" name = "Skils" value="{{Skils}}">
+        <input id="Skils" type="text" name = "Skils" [(ngModel)]="Skils">
         <label for="Skils" class="center-align">Skils</label>
       </div>
     </div>
     <div class="row margin">
       <div class="input-field col s10">
         <i class="mdi-action-lock-outline prefix"></i>
-        <input id="prix" type="number" name = "prix" value="{{prix}}">
+        <input id="prix" type="number" name = "prix" [(ngModel)]="prix">
         <label for="prix">prix</label>
       </div>
     </div>
@@ -89,7 +89,7 @@
   </form>
 
 <div class="modal-footer">
-<a type="submit" class="modal-close waves-effect waves-green btn-flat "(click)="onclick()">Register</a>
+<a type="submit" class="modal-close waves-effect waves-green btn-flat "(click)="onEditeForm()">Register</a>
 </div>
 
 

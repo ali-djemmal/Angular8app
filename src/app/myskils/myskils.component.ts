@@ -13,13 +13,19 @@ export class MyskilsComponent implements OnInit {
   items: Observable<any[]>;
   itemList :AngularFireList<any>;
   myItemArry =[]
-  @Input() nam:String
-  @Input() Telf:String
-  @Input() Addrss:String
-  @Input() Skil:String
-  @Input() prix :String
 
-  constructor(public db :AngularFireDatabase) { 
+
+  // 1 binding
+$key:string
+  nam:string
+   Telf:string
+ Addrss:string
+ Skil:string
+ prix :string
+
+  constructor(public db :AngularFireDatabase,public router : Router) { 
+    // recuperation des donner de firebase
+
     this.itemList = db.list('skils') ;
     this.itemList.snapshotChanges().subscribe(actions =>{
       actions.forEach(action => {
@@ -36,25 +42,51 @@ export class MyskilsComponent implements OnInit {
   }
 
   ngOnInit() {
+    // modal jQuery fonction
+
     $(document).ready(function(){
       $('.modal').modal();
     });
   }
 
-  onEdite( $key:String, nam :String, Telf :String, Addrss :String, Skil :String, prix :String){
-
+  onEdite( $key:string, nam :string, Telf :string, Addrss :string, Skil :string, prix :string){
+// form modal binding
+this.$key =$key;
 this.nam=nam;
 this.Telf=Telf;
 this.Addrss=Addrss;
 this.Skil=Skil;
 this.prix=prix;
 
-
-
     console.log('edite');
     
 
   }
+
+  onEditeForm(){
+
+    this.itemList.set(this.$key,{
+     
+      nam:this.nam,
+      Telf:this.Telf,
+      Addrss:this.Addrss,
+      Skil:this.Skil,
+      prix:this.prix,
+
+    })
+    this. myItemArry =[];
+    this.nam="";
+    this.Telf="";
+    this.Addrss="";
+    this.Skil="";
+    this.prix="";
+   
+  }
+
+  
+
+
+
 
   onDellet($key){
     console.log('delete');
