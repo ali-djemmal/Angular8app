@@ -1,37 +1,33 @@
 
 <div id="login-page center-align" class="row">
-    <div class="col s4 center card-panel">
-      <form class="login-form ">
-        <div class="row">
-          <div class="input-field col s8">
-          
-            <p class="center login-form-text" >register</p>
-          </div>
+  <div class="col s4 center card-panel">
+    <form class="login-form ">
+      <div class="row">
+        <div class="input-field col s8">
+        
+          <p class=" login-form-text center" >login</p>
         </div>
-        <div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="email " name = "nam" [(ngModel)]="nam">
-            <label for="username" class="center-align">email</label>
-          </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s10">
+          <i class="mdi-social-person-outline prefix"></i>
+          <input id="username" type="email " name = "nam" [(ngModel)]="email">
+          <label for="username" class="center-align">email</label>
+        </div>
+      </div>
+    
+      <div class="row margin">
+        <div class="input-field col s10">
+          <i class="mdi-social-person-outline prefix"></i>
+          <input id="username" type="password" name = "Telf" [(ngModel)]="password">
+          <label for="username" class="center-align">password</label>
         </div>
       
-        <div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="password" name = "Telf" [(ngModel)]="Telf">
-            <label for="username" class="center-align">password</label>
-          </div>
-        
-        </div>
-       
-        <div class="row">
-          <div class="input-field col s5">
-            <a href="index.html" class="btn waves-effect  col s5">Register</a>
-          </div>
-        </div>
+      </div>
+     
+      <button  type="submit" class="btn btn-success" (click)="register()">Login</button>
 
 
-      </form>
-    </div>
+    </form>
   </div>
+</div>

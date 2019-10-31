@@ -7,9 +7,10 @@
         <li><a routerLink="home" routerLinkActive="active">home</a></li>
       
         <li><a routerLink="addskils">Add</a></li>
-        <li><a routerLink="login">Login</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="login">Login</a></li>
+        <li *ngIf="isLoggedIn"><a (click)="logout()">LogOut</a></li>
 
-        <li><a routerLink="register">Register</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="register">Register</a></li>
         <li><a routerLink="skils">skils</a></li>
         <li><a routerLink="myskils">My skils</a></li>
        

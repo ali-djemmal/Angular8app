@@ -18,6 +18,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { DetaillsComponent } from './detaills/detaills.component';
 const appRoutes: Routes = [
   { path: '' , component:HomeComponent  } ,
   { path: 'home', component:HomeComponent  },
@@ -27,13 +28,18 @@ const appRoutes: Routes = [
   { path: 'register', component:RegisterComponent  }
   ,{ path: 'skils', component:SkilsComponent  },
   { path: 'myskils', component:MyskilsComponent  }
+  ,
+  { path: 'detaills/:id', component:DetaillsComponent  }
+
+
+
 ];
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     FooterComponent,
-    SkilsComponent,HomeComponent, AddSilsComponent, LoginComponent, RegisterComponent, MyskilsComponent
+    SkilsComponent,HomeComponent, AddSilsComponent, LoginComponent, RegisterComponent, MyskilsComponent, DetaillsComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(

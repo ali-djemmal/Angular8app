@@ -14,14 +14,14 @@
 
   <tbody>
     <tr *ngFor="let item of myItemArry">
-      <td>{{item.$key}}</td>
-      <td>{{item.nam}}</td>
-      <td>{{item.Telf}}</td>
-      <td>{{item.Addrss}}</td>
-      <td>{{item.Skil}}</td>
-      <td>{{item.prix}}</td>
-      <td><a class="btn-floating btn-large waves-effect waves-light green  modal-trigger" href="#i" (click)="onEdite(item.$key,item.nam,item.Telf,item.Addrss,item.Skil,item.prix)"><i class="material-icons">create</i></a></td>
-      <td><a class="btn-floating btn-large waves-effect waves-light red" (click)="onDellet(item.$key)"><i class="material-icons">delete_forever</i></a></td>
+      <td  *ngIf="item.uid === uid">{{item.$key}}</td>
+      <td  *ngIf="item.uid === uid">{{item.nam}}</td>
+      <td *ngIf="item.uid === uid">{{item.Telf}}</td>
+      <td *ngIf="item.uid === uid">{{item.Addrss}}</td>
+      <td *ngIf="item.uid === uid">{{item.Skil}}</td>
+      <td *ngIf="item.uid === uid">{{item.prix}}</td>
+      <td *ngIf="item.uid === uid"><a class="btn-floating btn-large waves-effect waves-light green  modal-trigger" href="#i" (click)="onEdite(item.$key,item.nam,item.Telf,item.Addrss,item.Skil,item.prix)"><i class="material-icons">create</i></a></td>
+      <td *ngIf="item.uid === uid"><a class="btn-floating btn-large waves-effect waves-light red" (click)="onDellet(item.$key)"><i class="material-icons">delete_forever</i></a></td>
 
       
 

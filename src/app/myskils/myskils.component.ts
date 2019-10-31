@@ -2,6 +2,7 @@ import { Component, OnInit , Input} from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireDatabaseModule} from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import {Router} from '@angular/router'
+import { build$$ } from 'protractor/built/element';
 
 declare var $:any ;
 @Component({
@@ -9,6 +10,8 @@ declare var $:any ;
   templateUrl: './myskils.component.html',
   styleUrls: ['./myskils.component.scss']
 })
+
+
 export class MyskilsComponent implements OnInit {
   items: Observable<any[]>;
   itemList :AngularFireList<any>;
@@ -17,15 +20,16 @@ export class MyskilsComponent implements OnInit {
 
   // 1 binding
 $key:string
-  nam:string
-   Telf:string
- Addrss:string
- Skil:string
- prix :string
+nam:string
+Telf:string
+Addrss:string
+Skil:string
+prix :string
+  uid: string;
 
   constructor(public db :AngularFireDatabase,public router : Router) { 
     // recuperation des donner de firebase
-
+    this.uid=localStorage.getItem('uid')
     this.itemList = db.list('skils') ;
     this.itemList.snapshotChanges().subscribe(actions =>{
       actions.forEach(action => {
@@ -37,7 +41,7 @@ $key:string
 
     })
 
-    
+   
     
   }
 
@@ -83,22 +87,19 @@ this.prix=prix;
    
   }
 
-  
-
-
-
-
-  onDellet($key){
+  onDellet($key : string){
+    this.itemList.remove($key) ;
+    this. myItemArry =[];
     console.log('delete');
   }
 }
 export class ListIemClass {
-$key:string;
-nam  :string;   
-Telf :string;
+$key   :string;
+nam    :string;   
+Telf   :string;
 Addrss :string;
-Skil :string;
-prix :string;
-
+Skil   :string;
+prix   :string;
+uid    :string;
 
 }

@@ -14,8 +14,8 @@ export class AddSilsComponent implements OnInit {
     Telf :'',
     Addrss  :'',
     Skil :'',
-    prix :''
-
+    prix :'',
+    uid: ''
   }
   items: Observable<any[]>;
   itemList :AngularFireList<any>
@@ -23,7 +23,7 @@ export class AddSilsComponent implements OnInit {
 
   constructor(public db :AngularFireDatabase,public router : Router) { 
 this.itemList = db.list('skils') ;
-
+this.data.uid=localStorage.getItem('uid')
 
   }
   insertSkils(){
@@ -34,14 +34,16 @@ this.itemList = db.list('skils') ;
       Addrss  : this.data.Addrss,
       Skil : this.data.Skil,
       prix :this.data.prix,
+      uid : this.data.uid,
 
 
 
     }) ;
+    console.log(this.data.uid);
     
     this.router.navigate(['\myskils']) 
  
-   console.log(this.data.nam);
+ 
 
   }
 
