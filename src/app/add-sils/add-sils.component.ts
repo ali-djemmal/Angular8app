@@ -12,8 +12,8 @@ export class AddSilsComponent implements OnInit {
   data ={
     nam  :'',
     Telf :'',
-    Addrss  :'',
-    Skil :'',
+    Address  :'',
+    Skils :'',
     prix :'',
     uid: ''
   }
@@ -31,8 +31,8 @@ this.data.uid=localStorage.getItem('uid')
     this.itemList.push({
       nam  : this.data.nam  ,       
       Telf : this.data.Telf,
-      Addrss  : this.data.Addrss,
-      Skil : this.data.Skil,
+      Addrss  : this.data.Address,
+      Skil: this.data.Skils,
       prix :this.data.prix,
       uid : this.data.uid,
 

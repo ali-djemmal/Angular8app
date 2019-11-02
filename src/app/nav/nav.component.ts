@@ -12,14 +12,15 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 user : Observable<firebase.User>
-private isLoggedIn : Boolean = false ;
-private email : string ;
+public isLoggedIn : Boolean = false ;
+public email : string ;
 
   constructor(public afAuth : AngularFireAuth , public router :Router) { 
     this.user = afAuth.authState ;
 
 
 let status = localStorage.getItem('isLogine')
+this.email =  localStorage.getItem('email') 
  if(status === 'true'){
 this.isLoggedIn = true ;
 
@@ -45,10 +46,13 @@ this.isLoggedIn = true ;
   }
 
   ngOnInit() {
+ 
   }
 logout(){
 this.afAuth.auth.signOut();
 localStorage.setItem('isLogine','false')
+localStorage.setItem('email', '') ;
+this.email=''
 this.isLoggedIn = false ;
 this.router.navigate(['home']);
 window.location.reload();

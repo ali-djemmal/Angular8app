@@ -24,6 +24,7 @@ login(){
     localStorage.setItem('isLogine','true')
     this.auth.user.subscribe(user => {
       localStorage.setItem('uid', user.uid) ;
+      localStorage.setItem('email', user.email) ;
     
     });
 
