@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-        <th>key</th>
+        <th> </th>
         <th> Name</th>
         <th> Telephone</th>
         <th> Addrss</th>
@@ -13,8 +13,8 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let item of myItemArry">
-      <td  *ngIf="item.uid === uid">{{item.$key}}</td>
+    <tr *ngFor="let item of myItemArry ; let index = index ;">
+      <td *ngIf=" index !== 0">{{index}}</td>
       <td  *ngIf="item.uid === uid">{{item.nam}}</td>
       <td *ngIf="item.uid === uid">{{item.Telf}}</td>
       <td *ngIf="item.uid === uid">{{item.Addrss}}</td>

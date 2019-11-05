@@ -1,0 +1,48 @@
+main>.container {
+    margin-top: 20px;
+}
+.container {
+    margin: 0%  auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+.card.card-login {
+    display: flex;
+}
+
+.card {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav, .jqvmap-label, .settings-group {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.card.card-login .card-login-splash {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex: 1;
+}
+
+.btn, .btn-large, .btn-small, .btn-flat {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+

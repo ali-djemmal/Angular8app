@@ -18,7 +18,7 @@ public email : string ;
   constructor(public afAuth : AngularFireAuth , public router :Router) { 
     this.user = afAuth.authState ;
 
-
+    window.stop();
 let status = localStorage.getItem('isLogine')
 this.email =  localStorage.getItem('email') 
  if(status === 'true'){
@@ -54,8 +54,9 @@ localStorage.setItem('isLogine','false')
 localStorage.setItem('email', '') ;
 this.email=''
 this.isLoggedIn = false ;
-this.router.navigate(['home']);
-window.location.reload();
+
+window.location.replace('login')
+
 
 
 

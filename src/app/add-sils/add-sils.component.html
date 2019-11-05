@@ -1,44 +1,43 @@
-<div id="login-page center-align" class="row">
-    <div class="col s4 center card-panel">
+<div class="valign-wrapper row login-box" style="margin-top: 8%;">
+  <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
       <form class="login-form " (ngSubmit)="insertSkils()">
-        <div class="row">
-          <div class="input-field col s8">
+        <div class="card-content">
+            <span class="card-title">Add Skils</span>
+     <div class="row">
           
-            <p class="center login-form-text" >Add Skils</p>
+      
+       
+          <div class=" input-field col s12">
+           
+            <input id="nam" type="text " class="validate" name = "nam" [(ngModel)]="data.nam">
+            <label for="nam"  >Username</label>
           </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="nam" type="text " name = "nam" [(ngModel)]="data.nam">
-            <label for="nam" class="center-align">Username</label>
-          </div>
-        </div>
+      
         
-        <div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="Telf" type="tel" name = "Telf" [(ngModel)]="data.Telf">
-            <label for="Telf" class="center-align">Telf</label>
+      
+          <div class=" input-field col s12">
+           
+            <input id="Telf" type="tel" class="validate" name = "Telf" [(ngModel)]="data.Telf">
+            <label for="Telf"   >Telf</label>
           </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="Address" type="text" name = "Address" [(ngModel)]="data.Address">
-            <label for="Address" class="center-align">Address</label>
+       
+         
+          <div class=" input-field col s12">
+           
+            <input id="Address" type="text" class="validate" name = "Address" [(ngModel)]="data.Address">
+            <label for="Address"   >Address</label>
           </div>
-        </div><div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="Skils" type="text" name = "Skils" [(ngModel)]="data.Skils">
-            <label for="Skils" class="center-align">Skils</label>
+       
+          <div class=" input-field col s12">
+           
+            <input id="Skils" type="text" class="validate" name = "Skils" [(ngModel)]="data.Skils">
+            <label for="Skils"   >Skils</label>
           </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s10">
-            <i class="mdi-action-lock-outline prefix"></i>
-            <input id="prix" type="number" name = "prix" [(ngModel)]="data.prix">
+        
+         
+          <div class=" input-field col s12">
+          
+            <input id="prix" type="number" class="validate" name = "prix" [(ngModel)]="data.prix">
             <label for="prix">prix</label>
           </div>
         </div>
@@ -49,7 +48,7 @@
          
         
 
-
+          </div>
       </form>
     </div>
   </div>

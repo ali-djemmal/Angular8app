@@ -22,6 +22,7 @@ export class AddSilsComponent implements OnInit {
 
 
   constructor(public db :AngularFireDatabase,public router : Router) { 
+    
 this.itemList = db.list('skils') ;
 this.data.uid=localStorage.getItem('uid')
 
